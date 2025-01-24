@@ -7,9 +7,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./typescript",
+    "rootDir": "./typescript-sdk",
     "declaration": true
   },
-  "include": ["typescript/**/*"],
+  "include": ["typescript-sdk/**/*", "ts-wrapper/**/*"],
   "exclude": ["node_modules"]
-} 
+}

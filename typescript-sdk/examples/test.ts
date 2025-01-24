@@ -1,4 +1,4 @@
-import { Rustify } from './index';
+import { Rustify } from '../index';
 
 async function main() {
   const app = new Rustify(3000);

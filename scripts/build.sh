@@ -1,9 +1,12 @@
 #!/bin/bash
-# Build Rust
-cargo build --release
+# Exit immediately if a command exits with a non-zero status
+set -e
 
-# Build TypeScript
-npx tsc
+# Build the Rust project with wasm-pack and generate TypeScript bindings
+wasm-pack build --target web --out-dir ts-wrapper
 
-# Copy worker.js to dist
-cp dist/worker.js dist/ 
+# # Build TypeScript
+# npx tsc
+
+# # Copy worker.js to dist
+# cp dist/worker.js dist/ 

@@ -2,8 +2,8 @@
   "name": "ts-rustify",
   "version": "0.1.0",
   "scripts": {
-    "build": "bash scripts/build.sh",
-    "dev": "npm run build && node dist/test.js",
+    "build": "napi build --platform && tsc",
+    "dev": "npm run build && node dist/examples/test.js",
     "test": "curl -X GET http://localhost:3000/hello && echo '\n' && curl -X POST -H 'Content-Type: application/json' -d '{\"test\":\"data\"}' http://localhost:3000/echo"
   },
   "dependencies": {
